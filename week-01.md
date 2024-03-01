@@ -6,6 +6,9 @@ Welcome to the first week of your microinternship! Below are the action items de
 
 🌟 - Advanced and optional tasks. Please consider tackling these only after completing all the required tasks and if you have the additional energy and enthusiasm to go the extra mile.
 
+## Create Task Tracking trello board
+- Add 4 columns to the board: ToDo, InProgress, OnReview, Done
+
 ## Setup Development Environment
 
 - ✅ **Install Visual Studio Code (VSCode):**
@@ -31,6 +34,7 @@ Welcome to the first week of your microinternship! Below are the action items de
 - ✅ **GitHub Repository:**
   - Create a GitHub repository for the project to share and collaborate on code. [Creating a new repository on GitHub](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
   - Share URL to your repo with a project Leader
+  - Add link to your trello board to the README.md file in your repository
 
 ## Initialize Project
 
