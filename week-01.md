@@ -30,6 +30,7 @@ Welcome to the first week of your microinternship! Below are the action items de
 
 - ✅ **GitHub Repository:**
   - Create a GitHub repository for the project to share and collaborate on code. [Creating a new repository on GitHub](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
+  - Share URL to your repo with a project Leader
 
 ## Initialize Project
 
@@ -42,7 +43,7 @@ Welcome to the first week of your microinternship! Below are the action items de
   - Ensure ESLint is properly configured in your IDE to highlight warnings and errors, promoting code quality. [ESLint Setup](https://eslint.org/docs/user-guide/getting-started)
 
 - ✅ **Create Pull Request with your changes:**
-  - Please make all your changes in a separate branch and create a pull-request to make it available for review. [How to create Pull Request (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+  - Please make all your changes in a separate branch and create a pull-request to make it available for review, assign your Project Leader as a reviewer. [How to create Pull Request (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 
 - 🌟 **Add Material-UI:**
   - Integrate Material-UI into your project for a rich set of UI components. [Material-UI Installation](https://mui.com/getting-started/installation/)
