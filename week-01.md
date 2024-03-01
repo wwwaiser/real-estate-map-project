@@ -7,6 +7,7 @@ Welcome to the first week of your microinternship! Below are the action items de
 🌟 - Advanced and optional tasks. Please consider tackling these only after completing all the required tasks and if you have the additional energy and enthusiasm to go the extra mile.
 
 ## Create Task Tracking trello board
+- ✅ Create [Trello](https://trello.com) free account
 - ✅ Add 4 columns to the board: ToDo, InProgress, OnReview, Done
 - ✅ Fill the ToDo column with tasks for the upcoming week
 - ✅ Share trello board with a project leader. My trello email is svayser@meridiancapital.com
