@@ -8,8 +8,11 @@ Thank you for participating in this microinternship. Let's create something amaz
 
 - [Week 1: Getting Started](week-01.md)
 
+## Virtual Meetings URL
+- [Microsoft Teams Url](https://teams.microsoft.com/l/meetup-join/19%3ameeting_Mjc5MTNmYmEtMzJkNi00Y2Y2LWJhYzAtODkzMjBhMzZkOTJj%40thread.v2/0?context=%7b%22Tid%22%3a%22517adee1-c3f5-45e6-97ae-287ce0d080d9%22%2c%22Oid%22%3a%22a3ce337d-6aff-4219-904c-d6667447b9ad%22%7d)
+
 ## Slides
-- [Kick-Off slides](https://openavenuesfoundation.sharepoint.com/:p:/r/sites/fellows/Shared%20Documents/Projects/P24026/Industry%20Project/Slides%20Template%20Session%20-%201.pptx?d=wc9f17aed96c541d9b4f8b031c6a38e3b&csf=1&web=1&e=rmdDbc)
+- [Slides Folder](https://openavenuesfoundation.sharepoint.com/:f:/r/sites/fellows/Shared%20Documents/Projects/P24026/Industry%20Project/Industry%20Project%20-%20Materials%20for%20Students/Slides?csf=1&web=1&e=rHivsA)
 
 ## Students Repos
 - [Juan Hernandez]()
