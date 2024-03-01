@@ -7,7 +7,9 @@ Welcome to the first week of your microinternship! Below are the action items de
 🌟 - Advanced and optional tasks. Please consider tackling these only after completing all the required tasks and if you have the additional energy and enthusiasm to go the extra mile.
 
 ## Create Task Tracking trello board
-- Add 4 columns to the board: ToDo, InProgress, OnReview, Done
+- ✅ Add 4 columns to the board: ToDo, InProgress, OnReview, Done
+- ✅ Fill the ToDo column with tasks for the upcoming week
+- ✅ Share trello board with a project leader. My trello email is svayser@meridiancapital.com
 
 ## Setup Development Environment
 
@@ -30,6 +32,7 @@ Welcome to the first week of your microinternship! Below are the action items de
     - [GitKraken](https://www.gitkraken.com/)
     - [SourceTree](https://www.sourcetreeapp.com/)
     - [GitHub Desktop](https://desktop.github.com/)
+    - Visual Studio GitLens extension (you already have it)
 
 - ✅ **GitHub Repository:**
   - Create a GitHub repository for the project to share and collaborate on code. [Creating a new repository on GitHub](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
