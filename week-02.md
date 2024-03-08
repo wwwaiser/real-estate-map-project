@@ -9,6 +9,9 @@ Please dont push your changes directly to the main branch. All your activities h
 - ✅ **Complete All Week 1 Required Tasks:**
   - Ensure all tasks from Week 1 are completed and understood. This includes setting up your development environment, initializing your project with Next.js, and integrating Material-UI.
 
+- ✅ **Rename your trello boards:**
+  - {FirstName} {LastName} - OpenAvenue microinternsip
+
 - ✅ **Host Application on Vercel:**
   - Deploy your Next.js application on Vercel. Follow the [Vercel Deployment Documentation](https://vercel.com/docs) for guidance.
 
