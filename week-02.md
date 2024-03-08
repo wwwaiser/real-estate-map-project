@@ -2,6 +2,8 @@
 
 Welcome to Week 2 of our microinternship! This week, we'll focus on integrating and exploring Mapbox GL using the `react-map-gl` library. It's crucial to complete all required tasks from Week 1 before proceeding.
 
+Please dont push your changes directly to the main branch. All your activities has to be done in a sepparate branch and Pull Requests has to be created at the end of the week, to allow project leader to review the code and provide feedback
+
 ## Required Tasks
 
 - ✅ **Complete All Week 1 Required Tasks:**
@@ -17,6 +19,7 @@ Welcome to Week 2 of our microinternship! This week, we'll focus on integrating 
 
 - ✅ **Create Map Component:**
   - Integrate a Map component in your application using `react-map-gl`. This will be your first step into adding interactive maps to your web app.
+  - If you dont have mapbox account you can utilize the following mapbox access token: pk.eyJ1Ijoic3ZheXNlciIsImEiOiJjbGgwbzl5NXcwdmMzM2VwdTkya2J6cDVmIn0.VrQewCt9w1K8QPsLzuDZjg
 
 ## Exploring `react-map-gl`
 
