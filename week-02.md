@@ -44,6 +44,7 @@ The primary goal this week is to explore and experiment with `react-map-gl`, a R
 - By the end of the week, ensure your application:
   - Is hosted on Vercel with the basic layout implemented.
   - Contains a Map component utilizing `react-map-gl` with at least Pins and Popups demonstrated.
+  - All code changes should be in a sepparate branch with a Pull Request to the main branch
 
 ## Resources
 
