@@ -27,15 +27,3 @@ Thank you for participating in this microinternship. Let's create something amaz
 - [Ha Nguyen](https://trello.com/b/k9GPNhVb/my-trello-board)
 
 ## Additional Resources
-
-
-## Advanced Topics
-
-
-## Collaboration Tools
-
-
-## Project Deployment
-
-
-## Feedback and Contributions
