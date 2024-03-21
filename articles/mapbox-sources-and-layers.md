@@ -126,3 +126,8 @@ function MyMap() {
 }
 ```
 By comparing these examples, you can see that `react-map-gl` abstracts away the imperative API calls, allowing you to define sources and layers in a more React-like way, using components and props. This distinction highlights the importance of choosing the right library based on the architecture and paradigms of your application.
+
+
+### Useful Resources
+- [A Complete Guide to Sources and Layers in React and Mapbox GL JS](https://www.lostcreekdesigns.co/writing/a-complete-guide-to-sources-and-layers-in-react-and-mapbox-gl-js)
+- [Tilesets & Datasets: Managing Data in Mapbox Studio](https://www.lostcreekdesigns.co/writing/tilesets-and-datasets-managing-data-in-mapbox-studio)
