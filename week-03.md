@@ -108,7 +108,9 @@ Learn to incorporate GraphQL queries in a React application, using the `@apollo/
     ```
 
 - 🌟 **Advanced Tasks:**
-  - For those seeking additional challenges, try integrating Terrain vector Source and layers to the map. Follow [this article](test)
+  - For those seeking additional challenges, try to integrate Terrain vector Source and Layer to the map.
+    - Read [an article](./articles/mapbox-sources-and-layers.md) explaining basic concepts of Mapbox Sources and Layers
+    - Incorporate Terrain Data to your Map component
 
 
 ## Resources
