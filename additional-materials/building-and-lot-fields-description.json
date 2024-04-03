@@ -1,0 +1,176 @@
+{
+    "label":"Building & Lot",
+    "cards":[
+       {
+          "title":"Building",
+          "fields":[
+             {
+                "label":"Year Built",
+                "fieldNameOrExtractor":"year_built"
+             },
+             {
+                "label":"Year Renovated",
+                "fieldNameOrExtractor":"year_renovated"
+             },
+             {
+                "label":"Stories",
+                "fieldNameOrExtractor":"floors"
+             },
+             {
+                "label":"Number of Buildings",
+                "fieldNameOrExtractor":"sum_buildings_nbr"
+             },
+             {
+                "label":"Existing Floor Area Ratio",
+                "fieldNameOrExtractor":"existing_floor_area_ratio",
+                "unit":" "
+             },
+             {
+                "label":"Commercial Units",
+                "fieldNameOrExtractor":"commercial_units"
+             },
+             {
+                "label":"Residential Units",
+                "fieldNameOrExtractor":"residential_units"
+             },
+             {
+                "label":"Total Units",
+                "fieldNameOrExtractor":"total_units"
+             },
+             {
+                "label":"Building Area",
+                "unit":"sf",
+                "fieldNameOrExtractor":"building_area"
+             },
+             {
+                "label":"Max Floor Plate",
+                "unit":"sf",
+                "fieldNameOrExtractor":"max_floor_plate"
+             },
+             {
+                "label":"Building Class",
+                "fieldNameOrExtractor":"building_class"
+             },
+             {
+                "label":"Frontage",
+                "fieldNameOrExtractor":"frontage",
+                "unit":"sf"
+             },
+             {
+                "label":"Depth",
+                "fieldNameOrExtractor":"depth",
+                "unit":"sf"
+             }
+          ]
+       },
+       {
+          "title":"Lot",
+          "fields":[
+             {
+                "label":"Property Type",
+                "fieldNameOrExtractor":"asset_type"
+             },
+             {
+                "label":"Lot Area SF",
+                "unit":"sf",
+                "fieldNameOrExtractor":"lot_size_sqft"
+             },
+             {
+                "label":"Lot Area Acres",
+                "unit":"acres",
+                "fieldNameOrExtractor":"lot_size_acres"
+             },
+             {
+                "label":"Zoning",
+                "fieldNameOrExtractor":"zoning"
+             },
+             {
+                "label":"Depth",
+                "unit":"ft",
+                "fieldNameOrExtractor":"lot_size_depth_feet"
+             },
+             {
+                "label":"Frontage",
+                "unit":"ft",
+                "fieldNameOrExtractor":"lot_size_frontage_feet"
+             },
+             {
+                "label":"Census Tract",
+                "fieldNameOrExtractor":"census_tract"
+             },
+             {
+                "label":"Opportunity Zone",
+                "fieldNameOrExtractor":"(dataItem) => formatBoolean(dataItem.opp_zone)"
+             }
+          ]
+       },
+       {
+          "title":"Location",
+          "fields":[
+             {
+                "label":"Metropolitan Statistical Area",
+                "fieldNameOrExtractor":"msa_name"
+             },
+             {
+                "label":"County",
+                "fieldNameOrExtractor":"fips_county"
+             },
+             {
+                "label":"Municipality",
+                "fieldNameOrExtractor":"municipality"
+             },
+             {
+                "label":"Minor Civil Division",
+                "fieldNameOrExtractor":"mcd_name"
+             },
+             {
+                "label":"Neighborhood",
+                "fieldNameOrExtractor":"neighborhood_name"
+             },
+             {
+                "label":"Legal",
+                "fieldNameOrExtractor":"legal_description"
+             }
+          ]
+       },
+       {
+          "width":"full",
+          "title":"Building SF Breakdown",
+          :"BuildingAreaBreakdownTable",
+          "hideIf":"(dataItem) => !dataItem.building_area"
+       },
+       {
+          "title":"Zoning Info",
+          "width":"half",
+          "hideIf":"(dataItem) => !dataItem",
+          "fields":[
+             {
+                "label":"Zoning District 1",
+                "fieldNameOrExtractor":"zoning_district_1"
+             },
+             {
+                "label":"Zoning District 2",
+                "fieldNameOrExtractor":"zoning_district_2",
+                "hideIfEmpty":true
+             },
+             {
+                "label":"Special District 1",
+                "fieldNameOrExtractor":"special_purpose_district",
+                "hideIfEmpty":true
+             },
+             {
+                "label":"Split Boundary",
+                "fieldNameOrExtractor":"(dataItem) => formatBoolean(dataItem.split_boundary)"
+             },
+             {
+                "label":"Sandborn Map #",
+                "fieldNameOrExtractor":"sanborn_map_number"
+             },
+             {
+                "label":"Zoning Map #",
+                "fieldNameOrExtractor":"zoning_map_number"
+             }
+          ]
+       }
+    ]
+ }

@@ -13,10 +13,10 @@ This week, we're going to integrate the GraphQL API with our Mapbox GL vector ma
 
 - ✅ **Display Data on Sidebar:**
   - Ensure that the sidebar updates with information fetched from the `reonomyProperties` object whenever a new parcel is selected.
-  - Refer to the provided file for descriptions of all labels and values to display from the `reonomyProperties` object: [Link to File]
+  - Refer to the provided file for descriptions of all labels and values to display from the `reonomyProperties` object: [Link to File](./additional-materials/building-and-lot-fields-description.json)
   
 - ✅ **Design Reference:**
-  - Use the provided image as a design reference for how to display the information: [Link to Design Reference]
+  - Use the provided image as a design reference for how to display the information: [Link to Design Reference](./additional-materials/building-and-lot-design.png)
 
 ## Optional Tasks
 
