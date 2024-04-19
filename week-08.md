@@ -25,6 +25,7 @@ A well-documented README serves as your project’s front page, providing a deta
      - **Mapbox GL**: Explain how you use Mapbox GL, including how tilesets were created and hosted on Mapbox Studio. Include links to the Mapbox documentation for further reading.
      - **GraphQL and Apollo Client**: Share why you chose GraphQL, its benefits, and how Apollo Client aids in your development process.
      - **Azure Data API**: Mention using the Data API builder for Azure Databases as a GraphQL server, enhancing the backend functionality.
+     - **Google API**: Mention what google APIs you use for geocoding and street view, add links to documentation
 
 ### **The Importance of a Good README**
 
