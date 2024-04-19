@@ -1,4 +1,4 @@
-# Important Notice for Students: Optimize Your Project Presentation with a Comprehensive README
+# Optimize Your Project Presentation with a Comprehensive README
 
 Dear Students,
 
