@@ -10,6 +10,10 @@ Thank you for participating in this microinternship. Let's create something amaz
 - [Week 2: Diving into Mapbox GL](week-02.md)
 - [Week 3: Exploring GraphQL as a Client](week-03.md)
 - [Week 4: Integrating Parcels Source and Layers](week-04.md)
+- [Week 5-6: Integrating Parcels Source and Layers](week-05-06.md)
+- [Week 7: Integrating Parcels Source and Layers](week-07.md)
+- [Week 8: Integrating Parcels Source and Layers](week-08.md)
+
 
 ## Virtual Meetings URL
 - [Microsoft Teams Url](https://teams.microsoft.com/l/meetup-join/19%3ameeting_Mjc5MTNmYmEtMzJkNi00Y2Y2LWJhYzAtODkzMjBhMzZkOTJj%40thread.v2/0?context=%7b%22Tid%22%3a%22517adee1-c3f5-45e6-97ae-287ce0d080d9%22%2c%22Oid%22%3a%22a3ce337d-6aff-4219-904c-d6667447b9ad%22%7d)
