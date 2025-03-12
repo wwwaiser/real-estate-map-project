@@ -4,6 +4,8 @@ Welcome to the first week of your microinternship! Below are the action items de
 
 ✅ - Required tasks
 
+☑️ - Optional task
+
 🌟 - Advanced and optional tasks. Please consider tackling these only after completing all the required tasks and if you have the additional energy and enthusiasm to go the extra mile.
 
 ## Create Task Tracking trello board
@@ -20,7 +22,7 @@ Welcome to the first week of your microinternship! Below are the action items de
 - ✅ **Install Git:**
   - Git is essential for version control and collaboration. [Git Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-- ✅ **VSCode Extensions:**
+- ☑️ **VSCode Extensions:**
   - Install the following VSCode extensions to enhance your development experience:
     - ESLint for code quality: [VSCode ESLint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
     - TypeScript for static type checking: [VSCode TypeScript Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.typescript-javascript-grammar)
@@ -28,7 +30,7 @@ Welcome to the first week of your microinternship! Below are the action items de
 
 ## Familiarize with Version Control and Collaboration Tools
 
-- ✅ **Git GUI Tools:**
+- ☑️ **Git GUI Tools:**
   - Familiarize yourself with a Git Graphical User Interface (GUI) tool. This can help manage your repository more intuitively:
     - [GitKraken](https://www.gitkraken.com/)
     - [SourceTree](https://www.sourcetreeapp.com/)
@@ -47,7 +49,7 @@ Welcome to the first week of your microinternship! Below are the action items de
  
   ✅ **Learn Next.js basics:**
   
-- ✅ **Setup ESLint:**
+- ☑️ **Setup ESLint:**
   - Ensure ESLint is properly configured in your IDE to highlight warnings and errors, promoting code quality. [ESLint Setup](https://eslint.org/docs/user-guide/getting-started)
 
 - ✅ **Create Pull Request with your changes:**
