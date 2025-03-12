@@ -12,12 +12,12 @@ Welcome to the first week of your microinternship! Below are the action items de
 - ✅ Create [Trello](https://trello.com) free account
 - ✅ Add 4 columns to the board: ToDo, InProgress, OnReview, Done
 - ✅ Fill the ToDo column with tasks for the upcoming week
-- ✅ Share trello board with a project leader. My trello email is svayser@meridiancapital.com
+- ✅ Share trello board with a project leader by clicking Share button on Trello. My trello email is svayser@meridiancapital.com
 
 ## Setup Development Environment
 
 - ✅ **Install Visual Studio Code (VSCode):**
-  - Download and install VSCode as your code editor. [VSCode Download](https://code.visualstudio.com/)
+  - Download and install VSCode as your code editor. [VSCode Download](https://code.visualstudio.com/) (Feel free to use any other IDE)
 
 - ✅ **Install Git:**
   - Git is essential for version control and collaboration. [Git Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -39,7 +39,7 @@ Welcome to the first week of your microinternship! Below are the action items de
 
 - ✅ **GitHub Repository:**
   - Create a GitHub repository for the project to share and collaborate on code. [Creating a new repository on GitHub](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
-  - Share URL to your repo with a project Leader
+  - Share URL to your repo with a project Leader and other students via email
   - Add link to your trello board to the README.md file in your repository
 
 ## Initialize Project
