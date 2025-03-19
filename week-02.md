@@ -1,6 +1,6 @@
 # Week 2: Diving into Mapbox GL with react-map-gl
 
-Welcome to Week 2 of our microinternship! This week, we'll focus on integrating and exploring Mapbox GL using the `react-map-gl` library. It's crucial to complete all required tasks from Week 1 before proceeding.
+Welcome to Week 2 of our project! This week, we'll focus on integrating and exploring Mapbox GL using the `react-map-gl` library. It's crucial to complete all required tasks from Week 1 before proceeding.
 
 Please dont push your changes directly to the main branch. All your activities has to be done in a sepparate branch and Pull Requests has to be created at the end of the week, to allow project leader to review the code and provide feedback
 
