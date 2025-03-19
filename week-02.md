@@ -13,7 +13,7 @@ Please dont push your changes directly to the main branch. All your activities h
   - {FirstName} {LastName} - OpenAvenue
 
 - ✅ **Host Application on Vercel:**
-  - Deploy your Next.js application on Vercel. Follow the [Vercel Deployment Documentation](https://vercel.com/docs) for guidance.
+  - Deploy your Next.js application on Vercel. Follow the [Import an existing project Documentation]([https://vercel.com/docs](https://vercel.com/docs/getting-started-with-vercel/import)) for guidance.
 
 - ✅ **Create Basic Layout:**
   - Develop a basic page layout if not completed in Week 1. This should include a header, sidebar, and content area.
