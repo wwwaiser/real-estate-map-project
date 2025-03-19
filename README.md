@@ -22,8 +22,8 @@ Thank you for participating in this build project. Let's create something amazin
 - [Project Folder](https://openavenuesfoundation.sharepoint.com/:f:/s/fellows/EuW8BAX5enNAiIdV6QqynkYBhMMpvcCMRbhGONdE7vOmew?e=YQenD3)
 
 ## Students Repos
-- []()
-- []()
+- [Ethan Straub](https://github.com/evstraub/Build-Project)
+- [Revathi Vaishnavi Kaza](https://github.com/kazavaishnavi1998/real-estate-map-project)
 - []()
 
 ## Students Trello Boards
