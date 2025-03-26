@@ -30,6 +30,6 @@ Thank you for participating in this build project. Let's create something amazin
 ## Students Trello Boards
 - [Ethan Straub](https://trello.com/b/H37SiPqY/build-project)
 - [Revathi Vaishnavi Kaza](https://trello.com/b/mfeUlGmk/real-estate-map-project)
-- [Sam]()
+- [Sam](https://trello.com/b/sw455yh9/my-trello-board)
 
 ## Additional Resources
