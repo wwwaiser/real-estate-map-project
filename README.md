@@ -24,11 +24,12 @@ Thank you for participating in this build project. Let's create something amazin
 ## Students Repos
 - [Ethan Straub](https://github.com/evstraub/Build-Project)
 - [Revathi Vaishnavi Kaza](https://github.com/kazavaishnavi1998/real-estate-map-project)
+- [Sam](https://github.com/Samarth677/real-estate-map-project)
 - []()
 
 ## Students Trello Boards
 - [Ethan Straub](https://trello.com/b/H37SiPqY/build-project)
 - [Revathi Vaishnavi Kaza](https://trello.com/b/mfeUlGmk/real-estate-map-project)
-- []()
+- [Sam]()
 
 ## Additional Resources
