@@ -9,19 +9,19 @@ This week, you'll enhance the map functionality by adding a parcels source and c
 
 
 - ✅ **Add Parcels Source to the Map:**
-  - Integrate the parcels source from the provided URL into your map component. Use the source URL: `"mapbox://svayser.ae1mculr"`.
+  - Integrate the parcels source from the provided URL into your map component. Use the source URL: `"mapbox://svayser.parcel-boundaries"`.
 
 - ✅ **Add Layers to Highlight Parcels:**
   - Your task is to add at least two layers to the map to visualize the parcels data effectively.
   
     1. **Line Layer:**
        - Create a layer of type `'line'` to draw the boundaries of the parcels.
-       - Ensure that this layer includes the `source-layer` attribute set to `"manhattan_staten_island_parce-7ng65o"`.
+       - Ensure that this layer includes the `source-layer` attribute set to `"attom-parcels"`.
        - Assign a unique `id` to this layer for identification.
 
     2. **Fill Layer:**
        - Add another layer of type `'fill'` to fill the parcels with color.
-       - This layer should also have the `source-layer` attribute set to `"manhattan_staten_island_parce-7ng65o"`.
+       - This layer should also have the `source-layer` attribute set to `"attom-parcels"`.
        - Like the line layer, make sure to provide a unique `id` to this fill layer.
 
 - ✅ **Handle Clicks on Parcels:**
