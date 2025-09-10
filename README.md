@@ -18,18 +18,15 @@ Thank you for participating in this build project. Let's create something amazin
 ## Virtual Meetings URL
 - [Microsoft Teams Url](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzRlMDg4MWQtYzUzMS00MDgxLTg4OTEtNWRmZDQwNjJhYTcy%40thread.v2/0?context=%7b%22Tid%22%3a%22517adee1-c3f5-45e6-97ae-287ce0d080d9%22%2c%22Oid%22%3a%22a3ce337d-6aff-4219-904c-d6667447b9ad%22%7d)
 
-## Slides
-- [Project Folder](https://openavenuesfoundation.sharepoint.com/:f:/s/fellows/EuW8BAX5enNAiIdV6QqynkYBhMMpvcCMRbhGONdE7vOmew?e=YQenD3)
-
 ## Students Repos
-- [Ethan Straub](https://github.com/evstraub/Build-Project)
-- [Revathi Vaishnavi Kaza](https://github.com/kazavaishnavi1998/real-estate-map-project)
-- [Sam](https://github.com/Samarth677/real-estate-map-project)
+- []()
+- []()
+- []()
 - []()
 
 ## Students Trello Boards
-- [Ethan Straub](https://trello.com/b/H37SiPqY/build-project)
-- [Revathi Vaishnavi Kaza](https://trello.com/b/mfeUlGmk/real-estate-map-project)
-- [Sam](https://trello.com/b/sw455yh9/my-trello-board)
+- [](https://trello.com/b/H37SiPqY/build-project)
+- [](https://trello.com/b/mfeUlGmk/real-estate-map-project)
+- [](https://trello.com/b/sw455yh9/my-trello-board)
 
 ## Additional Resources
