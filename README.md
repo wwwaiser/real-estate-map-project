@@ -21,12 +21,13 @@ Thank you for participating in this build project. Let's create something amazin
 ## Students Repos
 - [Srei Leak Theap](https://github.com/Meyyun/Interactive_Map_OpenAvenue)
 - [Conrad Hansen-Quartey](https://github.com/conrad1451/real-estate-map/tree/main)
-- []()
-- []()
+- [Anju](https://github.com/anjunthomas/real-estate-map-project)
+- [Het](https://github.com/hetptl1433/real-estate)
 
 ## Students Trello Boards
 - [Srei Leak Theap](https://trello.com/b/xUscLvcp/sreileaktheap-openavenue)
 - [Conrad Hansen-Quartey](https://trello.com/b/I955vEC3/my-trello-board)
-- []()
+- [Anju](https://trello.com/b/SKbfTDjx/real-estate-map-project)
+- [Het](https://trello.com/b/SKbfTDjx/real-estate-map-project)
 
 ## Additional Resources
