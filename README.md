@@ -28,6 +28,6 @@ Thank you for participating in this build project. Let's create something amazin
 - [Srei Leak Theap](https://trello.com/b/xUscLvcp/sreileaktheap-openavenue)
 - [Conrad Hansen-Quartey](https://trello.com/b/I955vEC3/my-trello-board)
 - [Anju](https://trello.com/b/SKbfTDjx/real-estate-map-project)
-- [Het](https://trello.com/b/SKbfTDjx/real-estate-map-project)
+- [Het](https://trello.com/b/doS39i1O/my-trello-board)
 
 ## Additional Resources
