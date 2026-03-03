@@ -4,6 +4,22 @@ Welcome to the Build Project Documentation repository. This README serves as a c
 
 Thank you for participating in this build project. Let's create something amazing together!
 
+## Meeting Schedule
+
+- **Schedule:** Every Tuesday at 3:00 PM ET (8 sessions total)
+- **Join:** [Microsoft Teams Meeting](https://teams.microsoft.com/meet/2481926895303?p=l3uJF65oeKZhmBx3L6)
+- **Meeting ID:** 248 192 689 530 3
+- **Passcode:** ZZ9HT6Dm
+
+## Participants
+
+| Name | Email |
+|------|-------|
+| Elijah Agard | agardelijah04@gmail.com |
+| Syed Naffi | Syed.Naffi@qc.cuny.edu |
+| Jose Alvarez | josea4599@gmail.com |
+| Adam Solomon | adamsolomon1801@gmail.com |
+
 ## Weekly Guides
 
 - [Week 1: Getting Started](week-01.md)
@@ -14,11 +30,4 @@ Thank you for participating in this build project. Let's create something amazin
 - [Week 7: Advanced Features with Google APIs and GraphQL](week-07.md)
 - [Week 8: Project Presentation](week-08.md)
 
-
-## Virtual Meetings URL
-
 ## Students Repos
-
-## Students Trello Boards
-
-## Additional Resources
