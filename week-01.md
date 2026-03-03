@@ -1,89 +1,102 @@
-# Microinternship Kickoff: Week 1 Action Items
+# Week 1: Getting Started
 
-Welcome to the first week of your microinternship! Below are the action items designed to set you up for success. These tasks are structured to accommodate both newcomers and those with more experience in web development.
+Welcome to the first week of your microinternship! This week focuses on setting up your development environment, initializing the project, and establishing the collaboration workflow we'll use throughout the program.
 
-✅ - Required tasks
+> **AI Tools Policy:** Using AI tools (ChatGPT, GitHub Copilot, Claude, etc.) is allowed and highly encouraged. However, you are expected to manually review and understand all work produced by LLMs before submitting it. You should be able to explain any code in your project.
 
-☑️ - Optional task
+## Program Schedule
 
-🌟 - Advanced and optional tasks. Please consider tackling these only after completing all the required tasks and if you have the additional energy and enthusiasm to go the extra mile.
+- **Duration:** 8 weekly sessions
+- **Meeting day:** Every Tuesday at 3:00 PM ET
+- **Assignments:** Weekly assignments are stored in this repository (`week-01.md` through `week-08.md`). Each week's assignment must be submitted **no later than Monday evening** before the next session.
 
-## Create Task Tracking trello board
-- ✅ Create [Trello](https://trello.com) free account
-- ✅ Add 4 columns to the board: ToDo, InProgress, OnReview, Done
-- ✅ Fill the ToDo column with tasks for the upcoming week
-- ✅ Share trello board with a project leader by clicking Share button on Trello. My trello email is svayser@meridiancapital.com
+## Task Legend
 
-## Setup Development Environment
+- ✅ Required task — must be completed this week
+- ☑️ Optional task — recommended but not required
+- 🌟 Advanced task — attempt only after completing all required tasks
 
-- ✅ **Install Visual Studio Code (VSCode):**
-  - Download and install VSCode as your code editor. [VSCode Download](https://code.visualstudio.com/) (Feel free to use any other IDE)
+---
+
+## 1. Setup Development Environment
+
+- ✅ **Install a Code Editor:**
+  Install [Visual Studio Code](https://code.visualstudio.com/) (recommended) or any code editor of your choice.
+
+- ✅ **Install Node.js:**
+  Download and install the latest LTS version of Node.js, which includes npm (the package manager you'll need for the project). [Node.js Download](https://nodejs.org/)
 
 - ✅ **Install Git:**
-  - Git is essential for version control and collaboration. [Git Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+  Git is essential for version control and collaboration. Follow the official installation guide for your operating system. [Git Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-- ☑️ **VSCode Extensions:**
-  - Install the following VSCode extensions to enhance your development experience:
-    - ESLint for code quality: [VSCode ESLint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-    - TypeScript for static type checking: [VSCode TypeScript Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.typescript-javascript-grammar)
-    - GitLens for enhanced Git capabilities: [VSCode GitLens Extension](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- ☑️ **VSCode Extensions (if using VSCode):**
+  These extensions will improve your development workflow:
+  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) — highlights code quality issues in real time
+  - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) — shows Git blame, history, and other insights inline
 
-## Familiarize with Version Control and Collaboration Tools
+## 2. Create Your GitHub Repository
 
-- ☑️ **Git GUI Tools:**
-  - Familiarize yourself with a Git Graphical User Interface (GUI) tool. This can help manage your repository more intuitively:
-    - [GitKraken](https://www.gitkraken.com/)
-    - [SourceTree](https://www.sourcetreeapp.com/)
-    - [GitHub Desktop](https://desktop.github.com/)
-    - Visual Studio GitLens extension (you already have it)
+- ✅ **Create a GitHub account** (if you don't have one): [github.com](https://github.com/)
 
-- ✅ **GitHub Repository:**
-  - Create a GitHub repository for the project to share and collaborate on code. [Creating a new repository on GitHub](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
-  - Share URL to your repo with a project Leader and other students via email
-  - Add link to your trello board to the README.md file in your repository
+- ✅ **Create a new repository** for your project. Name it something descriptive like `real-estate-map`. [How to create a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories)
 
-## Initialize Project
+- ✅ **Invite the project leader as a collaborator:**
+  This is required so I can review your code and pull requests. Go to your repository → **Settings** → **Collaborators** → **Add people** → search for [`wwwaiser`](https://github.com/wwwaiser) and send the invitation.
 
-- ✅ **Create Skeleton Project with Next.js:**
-  - Utilize Next.js to set up the skeleton of our project. Make sure it runs without errors. [Next.js Setup](https://nextjs.org/docs/getting-started)
- 
-  ✅ **Learn Next.js basics:**
-  
-- ☑️ **Setup ESLint:**
-  - Ensure ESLint is properly configured in your IDE to highlight warnings and errors, promoting code quality. [ESLint Setup](https://eslint.org/docs/user-guide/getting-started)
+  > **Important:** I will not be able to review your work until you complete this step. Please do this as soon as you create your repository.
 
-- ✅ **Create Pull Request with your changes:**
-  - Please make all your changes in a separate branch and create a pull-request to make it available for review, assign your Project Leader as a reviewer. [How to create Pull Request (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+## 3. Initialize the Project
+
+- ✅ **Create a Next.js project:**
+  Use the Next.js CLI to scaffold your application. Run the following command and follow the prompts:
+
+  ```bash
+  npx create-next-app@latest
+  ```
+
+  When prompted, accept the defaults (TypeScript, ESLint, App Router are all recommended). Make sure the project runs locally without errors by starting the dev server:
+
+  ```bash
+  npm run dev
+  ```
+
+  Learn more: [Next.js Getting Started](https://nextjs.org/docs/app/getting-started)
+
+- ☑️ **Configure ESLint:**
+  Next.js comes with ESLint pre-configured. Verify it works by running:
+
+  ```bash
+  npm run lint
+  ```
+
+  [ESLint Configuration Guide](https://eslint.org/docs/latest/use/getting-started)
+
+## 4. Learn the Pull Request Workflow
+
+All your work should follow this workflow — it mirrors how professional development teams operate:
+
+1. Create a new branch for your changes (e.g., `week-01-setup`)
+2. Make your changes and commit them
+3. Push the branch to GitHub
+4. Open a Pull Request (PR) and assign the project leader as a reviewer
+
+- ✅ **Create your first Pull Request:**
+  Push your initial Next.js project as a PR. [How to create a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+
+  > **Tip:** If you're new to Git branching, review this guide first: [Git Branching Basics](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+
+---
+
+## Advanced Tasks
+
+These are optional stretch goals for students who finish the required tasks early.
 
 - 🌟 **Add Material-UI:**
-  - Integrate Material-UI into your project for a rich set of UI components. [Material-UI Installation](https://mui.com/getting-started/installation/)
+  Integrate Material-UI into your project to access a library of pre-built React components (buttons, cards, grids, etc.). [Material-UI Installation](https://mui.com/material-ui/getting-started/installation/)
 
-## Basic Project Structure
-
-- 🌟 **Design Basic Page Layout:**
-  - Create a layout with a header, sidebar, and content block using Material-UI components. This task is crucial for understanding how to structure React components and use Material-UI.
-
-## Learn and Experiment
-
-- 🌟 **Begin Learning:**
-  - For those unfamiliar with React, GraphQL, or Material-UI, start by exploring their documentation and tutorials. Spend time creating simple components and queries to get a feel for these technologies.
-
-## Hosting the Project on Vercel
+- 🌟 **Design a Basic Page Layout:**
+  Using Material-UI, create a simple layout with a header, sidebar, and content area. This will give you a head start on the application structure we'll build in later weeks.
 
 - 🌟 **Deploy on Vercel:**
-  - After setting up your project, consider deploying it on Vercel for real-world exposure. Vercel specializes in hosting for JavaScript projects, particularly Next.js applications, providing a seamless deployment experience. This step is recommended for those who are interested in showcasing their work online. Follow the guide to deploy your Next.js app on Vercel: [Deploying Next.js on Vercel](https://nextjs.org/docs/deployment)
+  Deploy your project to the web using Vercel, which is built specifically for Next.js applications. This gives you a live URL to share. [Deploying Next.js on Vercel](https://nextjs.org/docs/app/getting-started/deploying)
 
-## Add authentication
-
-- 🌟 **User/Password Authentication:**
-  - For a more challenging task, implement [Credentials](https://next-auth.js.org/providers/credentials) authentication using the NextAuth library. This introduces you to Next.js' API routes and authentication. [NextAuth.js Documentation](https://next-auth.js.org/getting-started/introduction)
-
-## Explore Mapbox and GraphQL
-
-- 🌟 **Mapbox Account:**
-  - Create a free Mapbox account and explore Mapbox Studio to familiarize yourself with map customization. [Mapbox Official Site](https://www.mapbox.com/)
-
-- 🌟 **GraphQL Basics:**
-  - Learn the basics of GraphQL queries and mutations, considering how GraphQL could be used for data management in our project. [Introduction to GraphQL](https://graphql.org/learn/)
-
-This comprehensive list aims to cover everything from setup to advanced exploration, ensuring you're well-prepared for the exciting journey ahead. Good luck!
