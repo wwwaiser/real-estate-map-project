@@ -16,18 +16,9 @@ Thank you for participating in this build project. Let's create something amazin
 
 
 ## Virtual Meetings URL
-- [Microsoft Teams Url](https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzRlMDg4MWQtYzUzMS00MDgxLTg4OTEtNWRmZDQwNjJhYTcy%40thread.v2/0?context=%7b%22Tid%22%3a%22517adee1-c3f5-45e6-97ae-287ce0d080d9%22%2c%22Oid%22%3a%22a3ce337d-6aff-4219-904c-d6667447b9ad%22%7d)
 
 ## Students Repos
-- [Srei Leak Theap](https://github.com/Meyyun/Interactive_Map_OpenAvenue)
-- [Conrad Hansen-Quartey](https://github.com/conrad1451/real-estate-map/tree/main)
-- [Anju](https://github.com/anjunthomas/real-estate-map-project)
-- [Het](https://github.com/hetptl1433/real-estate)
 
 ## Students Trello Boards
-- [Srei Leak Theap](https://trello.com/b/xUscLvcp/sreileaktheap-openavenue)
-- [Conrad Hansen-Quartey](https://trello.com/b/I955vEC3/my-trello-board)
-- [Anju](https://trello.com/b/SKbfTDjx/real-estate-map-project)
-- [Het](https://trello.com/b/doS39i1O/my-trello-board)
 
 ## Additional Resources
