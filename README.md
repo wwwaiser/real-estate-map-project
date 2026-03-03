@@ -20,6 +20,10 @@ Thank you for participating in this build project. Let's create something amazin
 | Jose Alvarez | josea4599@gmail.com |
 | Adam Solomon | adamsolomon1801@gmail.com |
 
+## How It Works
+
+Students work independently throughout the week, using weekly group meetings to check in, discuss common challenges, share best practices, and receive feedback from the project leader. If you encounter an issue that requires one-on-one support, feel free to schedule a separate call with the project leader during the week.
+
 ## Weekly Guides
 
 - [Week 1: Getting Started](week-01.md)
