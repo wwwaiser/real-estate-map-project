@@ -35,3 +35,6 @@ Students work independently throughout the week, using weekly group meetings to 
 - [Week 8: Project Presentation](week-08.md)
 
 ## Students Repos
+
+- [Adam Solomon](https://github.com/AdamSoloMe/real-estate-map)
+- [Jose Alvarez](https://github.com/josea4599/real-estate-map)
