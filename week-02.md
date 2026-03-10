@@ -39,14 +39,21 @@ This week you'll add interactive maps to your application using `react-map-gl`, 
   Place markers (pins) on the map and implement popups that display information when a pin is clicked.
 
 - ☑️ **Experiment with Layers:**
-  Explore adding layers to customize the map's appearance and interactivity.
+  Explore adding layers to customize the map's appearance and interactivity. Check out these react-map-gl examples:
+  - [Adding Custom Data](https://visgl.github.io/react-map-gl/docs/get-started/adding-custom-data) — using Source and Layer components with GeoJSON data
+  - [Layer API Reference (Mapbox)](https://visgl.github.io/react-map-gl/docs/api-reference/mapbox/layer) — layer configuration and styling options
+  - [Examples](https://visgl.github.io/react-map-gl/examples) — interactive demos including GeoJSON, Heatmap, Clusters, and more
 
 ---
 
 ## Advanced Tasks
 
 - 🌟 **Advanced Map Features:**
-  Try integrating more complex features such as dynamic data layers, navigation controls, or custom-styled markers.
+  Try integrating more complex features such as dynamic data layers, navigation controls, or custom-styled markers. Explore these resources:
+  - [NavigationControl](https://visgl.github.io/react-map-gl/docs/api-reference/mapbox/navigation-control) — add zoom and rotation controls to the map
+  - [Marker](https://visgl.github.io/react-map-gl/docs/api-reference/mapbox/marker) — custom and draggable markers
+  - [GeoJSON Animation Example](https://visgl.github.io/react-map-gl/examples) — dynamically updating data on the map
+  - [Draggable Marker Example](https://visgl.github.io/react-map-gl/examples) — interactive marker positioning
 
 ## Resources
 
