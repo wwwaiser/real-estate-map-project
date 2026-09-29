@@ -12,12 +12,14 @@ All tasks are optional
 
 - 🌟 **Introduction of Search by Address Feature:**
   - We are introducing a search by address feature to our website. This feature involves using the Google Geocoder API to convert user input into geographical coordinates.
-  - After obtaining coordinates, utilize the `executeGetParcelByLocation` function from our GraphQL API to fetch the corresponding parcel ID. Here’s how you can achieve this with an example query:
+  - After obtaining coordinates, utilize the `executeGetParcelByLocation` function (it returns a list — take the first item's `id`, which matches the Mapbox parcel `ID` and `reonomyProperties.parcel_id`) from our GraphQL API to fetch the corresponding parcel ID. Here’s how you can achieve this with an example query:
 
   ```graphql
-  query getParcel($latitude: Single, $longitude: Single) {
-    executeGetParcelByLocation(longitude: $longitude, latitude: $latitude) {
-      parcel_id: ID
+  query getParcel($latitude: Float, $longitude: Float) {
+    executeGetParcelByLocation(latitude: $latitude, longitude: $longitude, limit: 1) {
+      parcel_id: id
+      address_street_number
+      address_street
     }
   }
 
