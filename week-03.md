@@ -7,22 +7,26 @@ This week, you'll delve into using GraphQL as a client. The aim is to interact w
 
 GraphQL is a powerful query language for APIs, enabling clients to request exactly what they need. This efficiency is a key advantage over traditional REST APIs.
 
-> **Temporary API address:** The usual endpoint `https://graphql.eng.meridiancapital.com/graphql` is unavailable while its SSL certificate is being renewed. Until further notice, use the direct address below. It is plain **HTTP**, which affects two things, both covered in this guide:
->
-> ```
-> http://cg-dw-prd-mcg-uncommon-raccoon-api.westus2.azurecontainer.io:5000/graphql
-> ```
->
-> 1. **Exploring the schema:** web-based tools on HTTPS pages (like Hasura's GraphiQL) can't call an HTTP address. Use [Postman](https://www.postman.com/downloads/) instead: create a new **GraphQL** request, paste the address, and Postman loads the schema for you.
-> 2. **Calling it from your app:** use the Next.js proxy described in *Setting Up Apollo Client* below, so your app keeps working once it's deployed to Vercel (HTTPS).
+## API Endpoint
 
-## Using GraphiQL Interface
+All weeks use this GraphQL endpoint:
 
-Familiarize yourself with the GraphiQL interface, a user-friendly environment to test GraphQL queries.
+```
+http://cg-dw-prd-mcg-uncommon-raccoon-api.westus2.azurecontainer.io:5000/graphql
+```
 
-- ✅ **Explore GraphiQL:**
-  - Access [Hasura's Public GraphiQL Interface](https://cloud.hasura.io/public/graphiql) (or Postman while the temporary address is in use — see above).
-  - Set the endpoint to `https://graphql.eng.meridiancapital.com/graphql`.
+It is served over plain **HTTP**, which affects two things, both covered in this guide:
+
+1. **Exploring the schema:** web-based tools on HTTPS pages (like Hasura's GraphiQL) can't call an HTTP address, so use Postman instead (next section).
+2. **Calling it from your app:** use the Next.js proxy described in *Setting Up Apollo Client* below, so your app keeps working once it's deployed to Vercel (HTTPS).
+
+## Exploring the Schema with Postman
+
+Get familiar with the API before writing code.
+
+- ✅ **Explore the API:**
+  - Install [Postman](https://www.postman.com/downloads/) (desktop app).
+  - Create a new **GraphQL** request and paste the endpoint above. Postman loads the schema automatically, so you can browse types and fields and autocomplete queries.
   - Experiment with the schema and practice writing queries.
 
 ## Basic GraphQL Queries
