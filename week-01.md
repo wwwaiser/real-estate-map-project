@@ -2,7 +2,7 @@
 
 Welcome to the first week of your microinternship! This week focuses on setting up your development environment, initializing the project, and establishing the collaboration workflow we'll use throughout the program.
 
-> **AI Tools Policy:** Using AI tools (ChatGPT, GitHub Copilot, Claude, etc.) is allowed and highly encouraged. However, you are expected to manually review and understand all work produced by LLMs before submitting it. You should be able to explain any code in your project.
+> **AI Tools Policy:** Using AI tools (ChatGPT, GitHub Copilot, Claude, etc.) is allowed and highly encouraged. However, you are expected to manually review and understand all work produced by LLMs before submitting it. You should be able to explain any code in your project. Code you cannot explain during a review call counts as not done.
 
 ## Program Schedule
 
@@ -54,13 +54,33 @@ Welcome to the first week of your microinternship! This week focuses on setting 
   npx create-next-app@latest
   ```
 
-  When prompted, accept the defaults (TypeScript, ESLint, App Router are all recommended). Make sure the project runs locally without errors by starting the dev server:
+  When prompted, choose the following:
+  - **TypeScript:** Yes
+  - **Linter:** ESLint (not Biome — the rest of this guide assumes ESLint)
+  - **Tailwind CSS:** Yes — we'll use it for page layout in Week 2
+  - **`src/` directory:** your choice
+  - **App Router:** Yes
+  - **React Compiler:** No (keep it simple)
+  - **Import alias:** accept the default (`@/*`)
+
+  The scaffold also creates an `AGENTS.md` file — it's guidance for AI coding assistants about Next.js conventions. Keep it; it helps if you use AI tools.
+
+  Make sure the project runs locally without errors by starting the dev server:
 
   ```bash
   npm run dev
   ```
 
   Learn more: [Next.js Getting Started](https://nextjs.org/docs/app/getting-started)
+
+- ✅ **Connect the project to your GitHub repository:**
+  `create-next-app` already initialized a local Git repository with an initial commit. Point it at the empty repository you created in step 2 and push:
+
+  ```bash
+  cd your-project-name
+  git remote add origin https://github.com/YOUR-USERNAME/real-estate-map.git
+  git push -u origin main
+  ```
 
 - ☑️ **Configure ESLint:**
   Next.js comes with ESLint pre-configured. Verify it works by running:
@@ -81,7 +101,7 @@ All your work should follow this workflow — it mirrors how professional develo
 4. Open a Pull Request (PR) and assign the project leader as a reviewer
 
 - ✅ **Create your first Pull Request:**
-  Push your initial Next.js project as a PR. [How to create a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+  Make a small change on a new branch (for example, edit the home page title in `app/page.tsx`) and open a PR for it. There is no branch protection on your repository, so it's your responsibility not to commit directly to `main`. [How to create a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 
   > **Tip:** If you're new to Git branching, review this guide first: [Git Branching Basics](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
@@ -91,11 +111,8 @@ All your work should follow this workflow — it mirrors how professional develo
 
 These are optional stretch goals for students who finish the required tasks early.
 
-- 🌟 **Add Material-UI:**
-  Integrate Material-UI into your project to access a library of pre-built React components (buttons, cards, grids, etc.). [Material-UI Installation](https://mui.com/material-ui/getting-started/installation/)
-
 - 🌟 **Design a Basic Page Layout:**
-  Using Material-UI, create a simple layout with a header, sidebar, and content area. This will give you a head start on the application structure we'll build in later weeks.
+  Using Tailwind CSS (included in the scaffold), create a simple layout with a header, sidebar, and content area. This will give you a head start on the application structure we'll build in later weeks. [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
 - 🌟 **Deploy on Vercel:**
   Deploy your project to the web using Vercel, which is built specifically for Next.js applications. This gives you a live URL to share. [Deploying Next.js on Vercel](https://nextjs.org/docs/app/getting-started/deploying)

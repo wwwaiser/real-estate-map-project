@@ -25,7 +25,7 @@ This week you'll add interactive maps to your application using `react-map-gl`, 
 ## 3. Create a Basic Layout
 
 - ✅ **Build a page layout:**
-  If you haven't already, create a simple layout with a header, sidebar, and content area. This will frame the map component you'll add next.
+  If you haven't already, create a simple layout with a header, sidebar, and content area using Tailwind CSS. This will frame the map component you'll add next.
 
 ## 4. Add a Map with react-map-gl
 
