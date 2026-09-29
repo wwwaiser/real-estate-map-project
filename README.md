@@ -7,9 +7,9 @@ Thank you for participating in this build project. Let's create something amazin
 ## Meeting Schedule
 
 - **Schedule:** Every Tuesday at 3:00 PM ET (8 sessions total)
-- **Join:** [Microsoft Teams Meeting](https://teams.microsoft.com/meet/2481926895303?p=l3uJF65oeKZhmBx3L6)
-- **Meeting ID:** 248 192 689 530 3
-- **Passcode:** ZZ9HT6Dm
+- **Join:** [Microsoft Teams Meeting](https://teams.microsoft.com/meet/261754150230820?p=yLiyUnBa1KejSxYqj9)
+- **Meeting ID:** 261 754 150 230 820
+- **Passcode:** xP2SL6J7
 
 ## Participants
 
