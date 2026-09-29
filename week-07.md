@@ -4,6 +4,10 @@ This week, we'll be enhancing our mapping application by improving our address s
 
 All tasks are optional
 
+> **Google API key:** You need your own key from the [Google Cloud Console](https://console.cloud.google.com/google/maps-apis/overview) with billing enabled (Google gives a monthly free credit that easily covers this project). Enable the **Geocoding API**, **Street View Static API**, and **Places API (New)**. Store the key in `.env.local` (for example `NEXT_PUBLIC_GOOGLE_MAPS_KEY=...`) and never commit it. Restrict the key to your localhost and Vercel domains.
+>
+> The [google-api.js](./additional-materials/google-api.js) example uses `@googlemaps/google-maps-services-js`, which is a **Node.js (server-side) library** — it cannot run in a browser component. Call it from a Next.js Route Handler or Server Action, or call the [Geocoding REST API](https://developers.google.com/maps/documentation/geocoding/requests-geocoding) directly with `fetch`.
+
 ## Enhanced Address Search
 
 - 🌟 **Introduction of Search by Address Feature:**
@@ -24,8 +28,9 @@ All tasks are optional
       }
     }
   }
+  ```
 
-    - Highlight the parcel on the map and display property details based on the search results.
+  - Highlight the parcel on the map and display property details based on the search results.
 
 ## Detailed Street View Integration
 

@@ -37,7 +37,7 @@ Understanding how to craft queries is fundamental in utilizing GraphQL.
     }
     ```
 
-    This query retrieves a list of users with their `id`, `name`, and `email`.
+    This query retrieves a list of tax assessor records with each property's address, coordinates, ATTOM ID, and parcel ID.
 
 ## Integrating GraphQL in React
 
@@ -50,30 +50,42 @@ Learn to incorporate GraphQL queries in a React application, using the `@apollo/
     npm install @apollo/client graphql
     ```
 
-  - Initialize Apollo Client in your application:
+  - Initialize Apollo Client in your application. These examples use Apollo Client 4: the client needs an `HttpLink` (the old `uri` shortcut was removed), and React hooks/components are imported from `@apollo/client/react`.
 
-    ```javascript
-    import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+    Create `lib/apollo.ts`:
 
-    const client = new ApolloClient({
-      uri: 'https://graphql.eng.meridiancapital.com/graphql',
+    ```typescript
+    import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
+
+    export const client = new ApolloClient({
+      link: new HttpLink({ uri: 'https://graphql.eng.meridiancapital.com/graphql' }),
       cache: new InMemoryCache(),
     });
+    ```
 
-    function App() {
-      return (
-        <ApolloProvider client={client}>
-          {/* Components will go here */}
-        </ApolloProvider>
-      );
+    In the Next.js App Router, providers must be Client Components. Create `components/Providers.tsx`:
+
+    ```tsx
+    'use client';
+
+    import { ApolloProvider } from '@apollo/client/react';
+    import { client } from '@/lib/apollo';
+
+    export default function Providers({ children }: { children: React.ReactNode }) {
+      return <ApolloProvider client={client}>{children}</ApolloProvider>;
     }
     ```
+
+    Then wrap `{children}` with `<Providers>` in `app/layout.tsx`.
 
 - ✅ **Making Queries with React:**
   - Use Apollo Client's `useQuery` hook to perform queries within your components:
 
-    ```javascript
-    import { useQuery, gql } from '@apollo/client';
+    ```tsx
+    'use client';
+
+    import { gql } from '@apollo/client';
+    import { useQuery } from '@apollo/client/react';
 
     const GET_TAX_ASSESSORS = gql`
       query {
@@ -89,18 +101,20 @@ Learn to incorporate GraphQL queries in a React application, using the `@apollo/
       }
     `;
     
-    function TaxAssessors() {
-      const { loading, error, data } = useQuery(GET_TAX_ASSESSORS);
-  
+    type TaxAssessor = { PropertyAddressFull: string; ATTOM_ID: string };
+
+    export default function TaxAssessors() {
+      const { loading, error, data } = useQuery<{
+        attomTaxAssessors: { items: TaxAssessor[] };
+      }>(GET_TAX_ASSESSORS);
+
       if (loading) return <p>Loading...</p>;
-      if (error) return <p>Error :(</p>;
-  
+      if (error) return <p>Error: {error.message}</p>;
+
       return (
         <div>
-          {data.attomTaxAssessors.items.map(({ PropertyAddressFull }, index) => (
-            <div key={index}>
-              <p>{PropertyAddressFull}</p>
-            </div>
+          {data?.attomTaxAssessors.items.map(({ PropertyAddressFull, ATTOM_ID }) => (
+            <p key={ATTOM_ID}>{PropertyAddressFull}</p>
           ))}
         </div>
       );
@@ -109,7 +123,7 @@ Learn to incorporate GraphQL queries in a React application, using the `@apollo/
 
 - 🌟 **Advanced Tasks:**
   - For those seeking additional challenges, try to integrate Terrain vector Source and Layer to the map.
-    - Read [an article](./articles/mapbox-sources-and-layers.md) explaining basic concepts of Mapbox Sources and Layers
+    - Read [an article](./additional-materials/mapbox-sources-and-layers.md) explaining basic concepts of Mapbox Sources and Layers
     - Incorporate Terrain Data to your Map component
 
 

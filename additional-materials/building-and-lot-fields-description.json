@@ -136,7 +136,7 @@
        {
           "width":"full",
           "title":"Building SF Breakdown",
-          :"BuildingAreaBreakdownTable",
+          "component":"BuildingAreaBreakdownTable",
           "hideIf":"(dataItem) => !dataItem.building_area"
        },
        {

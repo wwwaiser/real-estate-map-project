@@ -11,6 +11,8 @@ This week, you'll enhance the map functionality by adding a parcels source and c
 - ✅ **Add Parcels Source to the Map:**
   - Integrate the parcels source from the provided URL into your map component. Use the source URL: `"mapbox://svayser.parcel-boundaries"`.
 
+    > **Where are the parcels?** This tileset only covers New York City and only renders at **zoom levels 14–16**. If your map starts zoomed out or somewhere else, you will see nothing and it will look like your code is broken. Start the map over Manhattan, for example: `initialViewState={{ latitude: 40.7484, longitude: -73.9857, zoom: 15 }}`.
+
 - ✅ **Add Layers to Highlight Parcels:**
   - Your task is to add at least two layers to the map to visualize the parcels data effectively.
   
@@ -31,20 +33,23 @@ This week, you'll enhance the map functionality by adding a parcels source and c
       - Attach a click event listener to the map.
       - Within the click handler function, extract the `ID` attribute from the feature properties of the clicked parcel. This `ID` will be used in subsequent GraphQL queries as a "parcel id".
       
-      Example JavaScript code for the click handler:
+      Example click handler (`MapMouseEvent` is imported from `react-map-gl/mapbox`):
 
-      ```javascript
-      (event) => {
-          if (event.features.length > 0) {
-              setParcelId(event.features[0].properties.ID);
-          }
-      }
+      ```typescript
+      const onClick = (event: MapMouseEvent) => {
+        const feature = event.features?.[0];
+        if (feature) {
+          setParcelId(String(feature.properties?.ID));
+        }
+      };
       ```
+
+      > **TypeScript tip:** if you get `Property 'properties' does not exist on type 'GeoJSONFeature'`, install the missing type definitions with `npm i -D @types/geojson` and restart your editor/dev server.
       
     - **Interactive Layers:**
       - To ensure that your parcels layers are interactive and can trigger click events, specify your custom layer IDs in the `interactiveLayerIds` property of the map. This step is crucial for making your layers respond to click events.
       
-      Reference for `interactiveLayerIds`: [react-map-gl Map Documentation](https://visgl.github.io/react-map-gl/docs/api-reference/map#interactivelayerids)
+      Reference for `interactiveLayerIds`: [react-map-gl Map Documentation](https://visgl.github.io/react-map-gl/docs/api-reference/mapbox/map#interactivelayerids)
 
 ## Add Hover Effects
 
@@ -71,5 +76,5 @@ In essence, the knowledge and skills you acquire from these tasks will not only 
 ## Useful Links
 
 - [How to Style Map Layers](https://www.lostcreekdesigns.co/writing/how-to-style-map-layers-in-mapbox-gl-js)
-- [Example: Implementing Hover Effect on Layer](https://github.com/visgl/react-map-gl/tree/7.1-release/examples/filter)
+- [Example: Implementing Hover Effect on Layer](https://visgl.github.io/react-map-gl/examples/mapbox/filter)
 - [Tutorial: Interactive Layers Effects with Mapbox GL JS](https://docs.mapbox.com/help/tutorials/create-interactive-hover-effects-with-mapbox-gl-js/)

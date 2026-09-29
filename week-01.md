@@ -63,7 +63,9 @@ Welcome to the first week of your microinternship! This week focuses on setting 
   - **React Compiler:** No (keep it simple)
   - **Import alias:** accept the default (`@/*`)
 
-  The scaffold also creates an `AGENTS.md` file — it's guidance for AI coding assistants about Next.js conventions. Keep it; it helps if you use AI tools.
+  The scaffold also creates `AGENTS.md` and `CLAUDE.md` files — they're guidance for AI coding assistants about Next.js conventions. Keep them; they help if you use AI tools.
+
+  > **Note:** Recent npm versions print an `install-scripts` warning (e.g. about `unrs-resolver`) during install. It's safe to ignore — the project still builds and lints.
 
   Make sure the project runs locally without errors by starting the dev server:
 

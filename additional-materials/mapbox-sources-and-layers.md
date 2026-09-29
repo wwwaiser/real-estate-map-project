@@ -28,51 +28,35 @@ Layers in Mapbox dictate how the data from sources is rendered on the map. They 
 
 This example demonstrates how to add terrain data to your map using `react-map-gl` by incorporating the Mapbox Terrain v2 source. The Source component is used to add the mapbox.mapbox-terrain-v2 vector source, which contains terrain data such as contour lines. The Layer component then uses this source to draw lines representing these contours on the map.
 
-```jsx
-import React, { useState } from 'react';
-import ReactMapGL, { Source, Layer } from 'react-map-gl';
+```tsx
+'use client';
 
-const TerrainMap = () => {
-  const [viewport, setViewport] = useState({
-    latitude: 37.75,
-    longitude: -122.45,
-    zoom: 12,
-  });
+import Map, { Source, Layer } from 'react-map-gl/mapbox';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
+export default function TerrainMap() {
   return (
-    <ReactMapGL
-      {...viewport}
-      width="100%"
-      height="100%"
-      onViewportChange={setViewport}
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+    <Map
+      mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
+      initialViewState={{ latitude: 37.75, longitude: -122.45, zoom: 12 }}
+      mapStyle="mapbox://styles/mapbox/streets-v12"
+      style={{ width: '100%', height: '100%' }}
     >
-      <Source
-        id="mapbox-terrain"
-        type="vector"
-        url="mapbox://mapbox.mapbox-terrain-v2"
-      >
+      <Source id="mapbox-terrain" type="vector" url="mapbox://mapbox.mapbox-terrain-v2">
         <Layer
           id="terrain-data"
-          source="mapbox-terrain"
           type="line"
           source-layer="contour"
-          layout={{
-            "line-join": "round",
-            "line-cap": "round",
-          }}
-          paint={{
-            "line-color": "#ff69b4",
-            "line-width": 1,
-          }}
+          layout={{ 'line-join': 'round', 'line-cap': 'round' }}
+          paint={{ 'line-color': '#ff69b4', 'line-width': 1 }}
         />
       </Source>
-    </ReactMapGL>
+    </Map>
   );
-};
-
-export default TerrainMap;
+}
 ```
+
+> **react-map-gl 8:** there is no default `react-map-gl` import anymore — import from `react-map-gl/mapbox`. Older tutorials that use `ReactMapGL`, `onViewportChange`, `mapboxApiAccessToken`, or `width`/`height` props are written for v5 and will not work. Layers nested inside a `<Source>` inherit its id, so you don't need a `source` prop on them.
 
 ## Mapbox GL JS vs react-map-gl react wrapper
 
@@ -103,25 +87,23 @@ map.on('load', function() {
 
 ### react-map-gl Example
 In `react-map-gl`, adding a source and layer is done declaratively by rendering Source and Layer components as part of your React component's render method or return statement. Here's how you would add the same GeoJSON source and layer in `react-map-gl`:
-```jsx
-import React from 'react';
-import ReactMapGL, { Source, Layer } from 'react-map-gl';
+```tsx
+import Map, { Source, Layer } from 'react-map-gl/mapbox';
 
 function MyMap() {
   return (
-    <ReactMapGL /* props like initial viewport settings */>
+    <Map /* mapboxAccessToken, initialViewState, mapStyle, ... */>
       <Source id="myGeoJSON" type="geojson" data="path/to/data.geojson">
         <Layer
           id="myLayer"
           type="fill"
-          source="myGeoJSON"
           paint={{
             'fill-color': '#888888',
-            'fill-opacity': 0.5
+            'fill-opacity': 0.5,
           }}
         />
       </Source>
-    </ReactMapGL>
+    </Map>
   );
 }
 ```
