@@ -34,7 +34,7 @@ Get familiar with the API before writing code.
 Understanding how to craft queries is fundamental in utilizing GraphQL.
 
 - ✅ **Writing Queries:**
-  - Construct basic queries. Here's a simple example that fetches user information:
+  - Construct basic queries. Here's a simple example that fetches tax assessor records:
 
     ```
     query {
@@ -154,6 +154,8 @@ Learn to incorporate GraphQL queries in a React application, using the `@apollo/
       );
     }
     ```
+
+  - Save this as `components/TaxAssessors.tsx` and render `<TaxAssessors />` in your sidebar. You should see a list of property addresses. If you see `Error: Failed to fetch` or a 404, check that you restarted the dev server after adding the proxy to `next.config.ts`.
 
 - 🌟 **Advanced Tasks:**
   - For those seeking additional challenges, try to integrate Terrain vector Source and Layer to the map.

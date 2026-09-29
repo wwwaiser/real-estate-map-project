@@ -13,28 +13,46 @@ All tasks are optional
 ## Enhanced Address Search
 
 - 🌟 **Introduction of Search by Address Feature:**
-  - We are introducing a search by address feature to our website. This feature involves using the Google Geocoder API to convert user input into geographical coordinates.
-  - After obtaining coordinates, utilize the `executeGetParcelByLocation` function (it returns a list — take the first item's `id`, which matches the Mapbox parcel `ID` and `reonomyProperties.parcel_id`). The API returns this ID in **lowercase**, while the Mapbox tiles use **uppercase**. The `reonomyProperties` lookup ignores case, but a Mapbox highlight expression like `["==", ["get", "ID"], parcelId]` does not — call `parcelId.toUpperCase()` before using it on the map. from our GraphQL API to fetch the corresponding parcel ID. Here’s how you can achieve this with an example query:
+  Add a search box to your header. When the user submits an address:
 
-  ```graphql
-  query getParcel($latitude: Float, $longitude: Float) {
-    executeGetParcelByLocation(latitude: $latitude, longitude: $longitude, limit: 1) {
-      parcel_id: id
-      address_street_number
-      address_street
-    }
-  }
+  1. **Geocode the address** with the Google Geocoding API to get latitude and longitude:
 
-  query getProperty($parcelId: String) {
-    reonomyProperties(filter: {parcel_id: {eq: $parcelId}}) {
-      items {
-        address_line1
-      }
-    }
-  }
-  ```
+     ```typescript
+     const res = await fetch(
+       `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}`,
+     );
+     const geo = await res.json();
+     const location = geo.results?.[0]?.geometry?.location; // { lat, lng }, or undefined if not found
+     ```
 
-  - Highlight the parcel on the map and display property details based on the search results.
+  2. **Find the parcel at those coordinates** with `executeGetParcelByLocation` from our GraphQL API. It returns a list; take the first item's `id`, which matches the Mapbox parcel `ID` and `reonomyProperties.parcel_id`:
+
+     ```graphql
+     query GetParcelByLocation($latitude: Float, $longitude: Float) {
+       executeGetParcelByLocation(latitude: $latitude, longitude: $longitude, limit: 1) {
+         parcel_id: id
+       }
+     }
+     ```
+
+     `useQuery` runs as soon as the component renders, but this query should only run when the user clicks Search. Use Apollo's `useLazyQuery` instead, which gives you a function to call from your submit handler:
+
+     ```typescript
+     const [getParcel] = useLazyQuery(GET_PARCEL_BY_LOCATION);
+     // inside the submit handler:
+     const { data } = await getParcel({ variables: { latitude: location.lat, longitude: location.lng } });
+     const parcelId = data?.executeGetParcelByLocation?.[0]?.parcel_id;
+     ```
+
+     > **Uppercase the ID.** The API returns this ID in lowercase, while the Mapbox tiles use uppercase. The `reonomyProperties` lookup ignores case, but a Mapbox highlight expression like `["==", ["get", "ID"], parcelId]` does not. Call `parcelId.toUpperCase()` before storing it.
+
+  3. **Show the result:** set it as the selected parcel so your Week 5-6 sidebar loads the property details and your Week 4 highlight marks it on the map. Then move the map to it with a map ref:
+
+     ```tsx
+     const mapRef = useRef<MapRef>(null); // MapRef is imported from 'react-map-gl/mapbox'
+     // <Map ref={mapRef} ...>
+     mapRef.current?.flyTo({ center: [location.lng, location.lat], zoom: 17 });
+     ```
 
 ## Detailed Street View Integration
 

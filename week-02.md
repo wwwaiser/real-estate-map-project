@@ -30,13 +30,55 @@ This week you'll add interactive maps to your application using `react-map-gl`, 
 ## 4. Add a Map with react-map-gl
 
 - ✅ **Install and set up `react-map-gl`:**
-  Add the library to your project and render a basic map. Follow the setup instructions in the [react-map-gl documentation](https://visgl.github.io/react-map-gl/).
+  Install `react-map-gl` together with `mapbox-gl` (the map engine it wraps):
+
+  ```bash
+  npm install react-map-gl mapbox-gl
+  ```
+
+  Add your Mapbox access token to a `.env.local` file in the project root (this file is already in `.gitignore`, so it won't be committed):
+
+  ```bash
+  NEXT_PUBLIC_MAPBOX_TOKEN=your_token_here
+  ```
 
   > If you don't have a Mapbox account, you can use this access token:
   > `pk.eyJ1Ijoic3ZheXNlciIsImEiOiJjbGgwbzl5NXcwdmMzM2VwdTkya2J6cDVmIn0.VrQewCt9w1K8QPsLzuDZjg`
 
+  Create `components/MapView.tsx`. Note three things that trip people up:
+  - Import from **`react-map-gl/mapbox`** — the plain `react-map-gl` import doesn't exist in version 8, and older tutorials that use it (or `ReactMapGL`, `onViewportChange`, `mapboxApiAccessToken`) won't work.
+  - Import **`mapbox-gl/dist/mapbox-gl.css`**, or markers, popups and controls will render in the wrong place.
+  - The map is interactive, so the file must start with **`'use client'`**.
+
+  ```tsx
+  'use client';
+
+  import Map from 'react-map-gl/mapbox';
+  import 'mapbox-gl/dist/mapbox-gl.css';
+
+  export default function MapView() {
+    return (
+      <Map
+        mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
+        initialViewState={{ latitude: 40.7484, longitude: -73.9857, zoom: 15 }}
+        mapStyle="mapbox://styles/mapbox/streets-v12"
+        style={{ width: '100%', height: '100%' }}
+      />
+    );
+  }
+  ```
+
+  Render `<MapView />` in the content area of your layout. The map fills its parent, so **the parent needs a height** (for example Tailwind's `h-screen` or `flex-1` inside a full-height flex container) — otherwise the map is 0px tall and you'll see a blank page.
+
+  More in the [react-map-gl Get Started guide](https://visgl.github.io/react-map-gl/docs/get-started).
+
+- ✅ **Add the token to Vercel:**
+  `.env.local` is not uploaded to Vercel, so your deployed map will be blank until you add the same variable there: Vercel project → **Settings** → **Environment Variables** → add `NEXT_PUBLIC_MAPBOX_TOKEN`, then redeploy. Do the same later for any other `NEXT_PUBLIC_...` variable you add.
+
 - ✅ **Add Pins and Popups:**
-  Place markers (pins) on the map and implement popups that display information when a pin is clicked.
+  Place markers (pins) on the map and implement popups that display information when a pin is clicked. Use the [`Marker`](https://visgl.github.io/react-map-gl/docs/api-reference/mapbox/marker) and [`Popup`](https://visgl.github.io/react-map-gl/docs/api-reference/mapbox/popup) components as children of `<Map>`.
+
+  > **Tip:** in a marker's `onClick`, call `e.originalEvent.stopPropagation()`. Otherwise the click also reaches the map, which closes the popup you just opened.
 
 - ☑️ **Experiment with Layers:**
   Explore adding layers to customize the map's appearance and interactivity. Check out these react-map-gl examples:
@@ -52,8 +94,8 @@ This week you'll add interactive maps to your application using `react-map-gl`, 
   Try integrating more complex features such as dynamic data layers, navigation controls, or custom-styled markers. Explore these resources:
   - [NavigationControl](https://visgl.github.io/react-map-gl/docs/api-reference/mapbox/navigation-control) — add zoom and rotation controls to the map
   - [Marker](https://visgl.github.io/react-map-gl/docs/api-reference/mapbox/marker) — custom and draggable markers
-  - [GeoJSON Animation Example](https://visgl.github.io/react-map-gl/examples) — dynamically updating data on the map
-  - [Draggable Marker Example](https://visgl.github.io/react-map-gl/examples) — interactive marker positioning
+  - [GeoJSON Animation Example](https://visgl.github.io/react-map-gl/examples/mapbox/geojson-animation) — dynamically updating data on the map
+  - [Draggable Marker Example](https://visgl.github.io/react-map-gl/examples/mapbox/draggable-markers) — interactive marker positioning
 
 ## Resources
 
