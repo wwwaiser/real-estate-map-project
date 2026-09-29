@@ -7,12 +7,21 @@ This week, you'll delve into using GraphQL as a client. The aim is to interact w
 
 GraphQL is a powerful query language for APIs, enabling clients to request exactly what they need. This efficiency is a key advantage over traditional REST APIs.
 
+> **Temporary API address:** The usual endpoint `https://graphql.eng.meridiancapital.com/graphql` is unavailable while its SSL certificate is being renewed. Until further notice, use the direct address below. It is plain **HTTP**, which affects two things, both covered in this guide:
+>
+> ```
+> http://cg-dw-prd-mcg-uncommon-raccoon-api.westus2.azurecontainer.io:5000/graphql
+> ```
+>
+> 1. **Exploring the schema:** web-based tools on HTTPS pages (like Hasura's GraphiQL) can't call an HTTP address. Use [Postman](https://www.postman.com/downloads/) instead: create a new **GraphQL** request, paste the address, and Postman loads the schema for you.
+> 2. **Calling it from your app:** use the Next.js proxy described in *Setting Up Apollo Client* below, so your app keeps working once it's deployed to Vercel (HTTPS).
+
 ## Using GraphiQL Interface
 
 Familiarize yourself with the GraphiQL interface, a user-friendly environment to test GraphQL queries.
 
 - ✅ **Explore GraphiQL:**
-  - Access [Hasura's Public GraphiQL Interface](https://cloud.hasura.io/public/graphiql).
+  - Access [Hasura's Public GraphiQL Interface](https://cloud.hasura.io/public/graphiql) (or Postman while the temporary address is in use — see above).
   - Set the endpoint to `https://graphql.eng.meridiancapital.com/graphql`.
   - Experiment with the schema and practice writing queries.
 
@@ -52,13 +61,34 @@ Learn to incorporate GraphQL queries in a React application, using the `@apollo/
 
   - Initialize Apollo Client in your application. These examples use Apollo Client 4: the client needs an `HttpLink` (the old `uri` shortcut was removed), and React hooks/components are imported from `@apollo/client/react`.
 
-    Create `lib/apollo.ts`:
+    First, add a proxy to `next.config.ts`. The API is served over plain HTTP, and browsers block HTTP requests from HTTPS pages (your Vercel deployment). With this rewrite, your app calls its own `/api/graphql` route and the Next.js server forwards the request to the API:
+
+    ```typescript
+    import type { NextConfig } from 'next';
+
+    const nextConfig: NextConfig = {
+      async rewrites() {
+        return [
+          {
+            source: '/api/graphql',
+            destination: 'http://cg-dw-prd-mcg-uncommon-raccoon-api.westus2.azurecontainer.io:5000/graphql',
+          },
+        ];
+      },
+    };
+
+    export default nextConfig;
+    ```
+
+    Restart `npm run dev` after changing `next.config.ts`.
+
+    Then create `lib/apollo.ts`:
 
     ```typescript
     import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
 
     export const client = new ApolloClient({
-      link: new HttpLink({ uri: 'https://graphql.eng.meridiancapital.com/graphql' }),
+      link: new HttpLink({ uri: '/api/graphql' }),
       cache: new InMemoryCache(),
     });
     ```
