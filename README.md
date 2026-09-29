@@ -13,12 +13,12 @@ Thank you for participating in this build project. Let's create something amazin
 
 ## Participants
 
-| Name | Email |
-|------|-------|
-| Elijah Agard | agardelijah04@gmail.com |
-| Syed Naffi | Syed.Naffi@qc.cuny.edu |
-| Jose Alvarez | josea4599@gmail.com |
-| Adam Solomon | adamsolomon1801@gmail.com |
+| Name | Email | Education |
+|------|-------|-----------|
+| Esther Chung | estherchung83@gmail.com | Computer Science, University of California-Santa Cruz |
+| Cato Cannizzo | catoc@bu.edu | Computer Science, Boston University |
+| Mythri Chithoori | chmadhurya98@gmail.com | Master's in Information Systems, Saint Louis University |
+| Venessa Maduka | nneomav04@gmail.com | Computer Engineering, Boston University |
 
 ## How It Works
 
@@ -36,5 +36,4 @@ Students work independently throughout the week, using weekly group meetings to 
 
 ## Students Repos
 
-- [Adam Solomon](https://github.com/AdamSoloMe/real-estate-map)
-- [Jose Alvarez](https://github.com/josea4599/real-estate-map)
+_Links will be added once students create their repos in Week 1._
