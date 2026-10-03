@@ -12,21 +12,16 @@ GraphQL is a powerful query language for APIs, enabling clients to request exact
 All weeks use this GraphQL endpoint:
 
 ```
-http://cg-dw-prd-mcg-uncommon-raccoon-api.westus2.azurecontainer.io:5000/graphql
+https://graphql.eng.meridiancapital.com/graphql
 ```
 
-It is served over plain **HTTP**, which affects two things, both covered in this guide:
+## Using GraphiQL Interface
 
-1. **Exploring the schema:** web-based tools on HTTPS pages (like Hasura's GraphiQL) can't call an HTTP address, so use Postman instead (next section).
-2. **Calling it from your app:** use the Next.js proxy described in *Setting Up Apollo Client* below, so your app keeps working once it's deployed to Vercel (HTTPS).
+Familiarize yourself with the GraphiQL interface, a user-friendly environment to test GraphQL queries.
 
-## Exploring the Schema with Postman
-
-Get familiar with the API before writing code.
-
-- ✅ **Explore the API:**
-  - Install [Postman](https://www.postman.com/downloads/) (desktop app).
-  - Create a new **GraphQL** request and paste the endpoint above. Postman loads the schema automatically, so you can browse types and fields and autocomplete queries.
+- ✅ **Explore GraphiQL:**
+  - Access [Hasura's Public GraphiQL Interface](https://cloud.hasura.io/public/graphiql).
+  - Set the endpoint to `https://graphql.eng.meridiancapital.com/graphql`.
   - Experiment with the schema and practice writing queries.
 
 ## Basic GraphQL Queries
@@ -65,34 +60,13 @@ Learn to incorporate GraphQL queries in a React application, using the `@apollo/
 
   - Initialize Apollo Client in your application. These examples use Apollo Client 4: the client needs an `HttpLink` (the old `uri` shortcut was removed), and React hooks/components are imported from `@apollo/client/react`.
 
-    First, add a proxy to `next.config.ts`. The API is served over plain HTTP, and browsers block HTTP requests from HTTPS pages (your Vercel deployment). With this rewrite, your app calls its own `/api/graphql` route and the Next.js server forwards the request to the API:
-
-    ```typescript
-    import type { NextConfig } from 'next';
-
-    const nextConfig: NextConfig = {
-      async rewrites() {
-        return [
-          {
-            source: '/api/graphql',
-            destination: 'http://cg-dw-prd-mcg-uncommon-raccoon-api.westus2.azurecontainer.io:5000/graphql',
-          },
-        ];
-      },
-    };
-
-    export default nextConfig;
-    ```
-
-    Restart `npm run dev` after changing `next.config.ts`.
-
-    Then create `lib/apollo.ts`:
+    Create `lib/apollo.ts`:
 
     ```typescript
     import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
 
     export const client = new ApolloClient({
-      link: new HttpLink({ uri: '/api/graphql' }),
+      link: new HttpLink({ uri: 'https://graphql.eng.meridiancapital.com/graphql' }),
       cache: new InMemoryCache(),
     });
     ```
@@ -155,7 +129,7 @@ Learn to incorporate GraphQL queries in a React application, using the `@apollo/
     }
     ```
 
-  - Save this as `components/TaxAssessors.tsx` and render `<TaxAssessors />` in your sidebar. You should see a list of property addresses. If you see `Error: Failed to fetch` or a 404, check that you restarted the dev server after adding the proxy to `next.config.ts`.
+  - Save this as `components/TaxAssessors.tsx` and render `<TaxAssessors />` in your sidebar. You should see a list of property addresses.
 
 - 🌟 **Advanced Tasks:**
   - For those seeking additional challenges, try to integrate Terrain vector Source and Layer to the map.
