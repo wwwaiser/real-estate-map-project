@@ -36,14 +36,11 @@ This week you'll add interactive maps to your application using `react-map-gl`, 
   npm install react-map-gl mapbox-gl
   ```
 
-  Add your Mapbox access token to a `.env.local` file in the project root (this file is already in `.gitignore`, so it won't be committed):
+  Add the project's Mapbox access token to a `.env.local` file in the project root (this file is already in `.gitignore`, so it won't be committed). **Use this token for the project — don't create your own:**
 
   ```bash
-  NEXT_PUBLIC_MAPBOX_TOKEN=your_token_here
+  NEXT_PUBLIC_MAPBOX_TOKEN=pk.eyJ1Ijoic3ZheXNlciIsImEiOiJjbGgwbzl5NXcwdmMzM2VwdTkya2J6cDVmIn0.VrQewCt9w1K8QPsLzuDZjg
   ```
-
-  > If you don't have a Mapbox account, you can use this access token:
-  > `pk.eyJ1Ijoic3ZheXNlciIsImEiOiJjbGgwbzl5NXcwdmMzM2VwdTkya2J6cDVmIn0.VrQewCt9w1K8QPsLzuDZjg`
 
   Create `components/MapView.tsx`. Note three things that trip people up:
   - Import from **`react-map-gl/mapbox`** — the plain `react-map-gl` import doesn't exist in version 8, and older tutorials that use it (or `ReactMapGL`, `onViewportChange`, `mapboxApiAccessToken`) won't work.
