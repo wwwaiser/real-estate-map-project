@@ -36,4 +36,7 @@ Students work independently throughout the week, using weekly group meetings to 
 
 ## Students Repos
 
-_Links will be added once students create their repos in Week 1._
+- [Esther Chung](https://github.com/estherchung83/real-estate-map)
+- [Cato Cannizzo](https://github.com/CatoCannizzo/Real-estate-map)
+- [Venessa Maduka](https://github.com/nneoexe/real-estate-map)
+- Mythri Chithoori — _repo link pending_
